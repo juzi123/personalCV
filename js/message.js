@@ -59,13 +59,19 @@
             var myForm = this.form
             let content = myForm.querySelector('input[name=content]').value
             let name = myForm.querySelector('input[name=name]').value
-            this.model.save(name, content).then(function (object) {
-                let li = document.createElement('li')
-                li.innerText = `${object.attributes.name}: ${object.attributes.content}`
-                let messageList = document.querySelector('#messageList')
-                messageList.appendChild(li)
-                myForm.querySelector('input[name=content]').value = ''
-            })
+            if (name === ''){
+                alert('姓名不能为空')
+            } else if(content === ''){
+                alert('内容不能为空')
+            } else {
+                this.model.save(name, content).then(function (object) {
+                    let li = document.createElement('li')
+                    li.innerText = `${object.attributes.name}: ${object.attributes.content}`
+                    let messageList = document.querySelector('#messageList')
+                    messageList.appendChild(li)
+                    myForm.querySelector('input[name=content]').value = ''
+                })
+            }
         },
         bindEvents: function () {
             this.form.addEventListener('submit', (e) => {
