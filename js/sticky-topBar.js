@@ -1,5 +1,5 @@
 ! function () {
-    var view = document.querySelector('#topNavBar')
+    var view = document.querySelector('#topDiv')
 
     var controller = {
         view: null,
@@ -21,9 +21,11 @@
         },
         active: function () {
             this.view.classList.add('sticky')
+            $('.topNavBar').addClass('sticky')
         },
         deactive: function () {
             this.view.classList.remove('sticky')
+            $('.topNavBar').removeClass('sticky')
         }
     }
     

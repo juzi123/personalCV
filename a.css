@@ -1,4 +1,4 @@
-body {background-color: #EFEFEF;color: black;}
+body {background-color: #1A1F2A;color: black;}
 * {margin: 0;padding: 0;}
 h1,h2,h3,h4 {font-weight: normal;}
 a {text-decoration: none;color: inherit;}
@@ -11,15 +11,16 @@ a {text-decoration: none;color: inherit;}
 .loading::after {content: '';position: absolute;background: black;width: 0;height: 0;top: 0;bottom: 0;left: 0;right: 0;margin: auto;border-radius: 50%;animation: s 1.2s linear infinite;}
 .loading::after {animation-delay: 0.6s;}
 @keyframes s {0% {width: 0;height: 0;opacity: 0.7;}100% {width: 100px;height: 100px;opacity: 0;}}
-.topDiv {width: 100%;position: fixed;z-index: 1;}
-.topDiv>.topNavBar {padding: 10px 16px 10px 16px;transition: all 0.5s;color: #b7b7b7;}
+.topDiv {width: 100%; position: fixed; z-index: 1;transition: all 0.75s;}
+.topDiv.sticky {background-color: rgba(26, 31, 42, 0.8); color: #9A9DA2; box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);}
+.topDiv>.topNavBar {padding: 30px 10px 30px 10px; max-width: 1200px; margin: auto; color: #b7b7b7;transition: all 0.75s;}
+.topDiv>.topNavBar.sticky {padding: 10px 10px 10px 10px;}
 .topDiv>.topNavBar>.logo {font-size: 24px;padding: 11px 4px;font-family: 'Arial Black';}
 .topDiv>.topNavBar>.logo .rs {color: #E6686A;padding-right: 4px;}
 .topDiv>.topNavBar>.logo .card {color: #9A9DA2;}
-.topDiv>.topNavBar.sticky {background: white;color: #3d4451;padding: 3px 16px 3px 16px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
-.topDiv>.topNavBar>nav>ul {padding: 19px 10px;}
+.topDiv>.topNavBar>nav>ul {padding: 30px 10px 10px 10px;}
 .topDiv>.topNavBar>nav>ul>li {float: left;display: block;position: relative;margin-left: 16px;margin-right: 16px;}
-.topDiv>.topNavBar>nav>ul>li>a {color: inherit;font-size: 12px;font-weight: bold;border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding-bottom: 5px;padding-top: 5px;position: relative;}
+.topDiv>.topNavBar>nav>ul>li>a {color: white;font-size: 16px;border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding-bottom: 5px;padding-top: 5px;position: relative;font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif}
 .topDiv>.topNavBar>nav>ul>li.active>a::after,
 .topDiv>.topNavBar>nav>ul>li.highLight>a::after {content: '';display: block;position: absolute;top: 100%;left: 0;width: 100%;background: #e06567;height: 3px;animation: menuSlide 0.3s;}
 @keyframes menuSlide {0% {width: 0%;}100% {width: 100%;}}
@@ -27,45 +28,21 @@ a {text-decoration: none;color: inherit;}
 .topDiv>.topNavBar>nav .submenu>li {white-space: nowrap;display: inline-block;padding: 5px 10px;}
 .topDiv>.topNavBar li.active>.submenu {list-style: none;display: block;background: white;color: #3d4451;box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);animation: submenuSlide 0.3s;}
 @keyframes submenuSlide {0% {margin-right: 100%;}100% {margin-right: 0%;}}
-.bgPhoto {height: 515px;background-image: url(./img/rs-cover.jpg);background-position: center center;background-size: cover;}
-.bgPhoto .bgColor {background-color: rgba(0, 0, 0, 0.8);height: 515px;}
-main .mesCard {background-color: white;max-width: 940px;margin-left: auto;margin-right: auto;margin-top: -345px;box-shadow: 0px 1px 10px 1px rgba(168, 168, 168, 0.8);}
-main .mesCard .avatar {padding: 50px 0px 0px 50px;float: left;}
-main .mesCard .message {float: left;padding-left: 65px;width: 470px;}
-main .mesCard .message .logoHello {background: #E6686A;color: white;width: 40px;padding: 4px 15px;margin-top: 50px;}
-main .mesCard .message .triangle {border: 5px transparent solid;width: 0px;height: 0px;margin-left: 10px;border-top-color: #E6686A;border-left-color: #E6686A;}
-main .mesCard .message h1 {padding-top: 27px;margin-bottom: 8px;}
-main .mesCard .message hr {margin: 22px 0px 28px 0px;}
-main .mesCard .message dl dt {float: left;width: 30%;font-weight: bold;padding: 7px 0px;}
-main .mesCard .message dl dd {float: left;width: 70%;margin: 0px;padding: 7px 0px;color: #9da0a7;}
-main .mesCard footer {margin-top: 40px;padding: 7px 0px;background-color: #E6686A;text-align: center;}
-main .mesCard svg {width: 30px;height: 30px;fill: white;vertical-align: top;}
-main .mesCard>footer>a {display: inline-block;width: 40px;line-height: 30px;padding: 5px 0;border-radius: 50%;margin: 16px 32px;}
-main .mesCard>footer>a:hover {background-color: #CF5D5F;}
-main .pdf {text-align: center;}
-main .dPdf {font-size: 14px;color: #3d4451;line-height: 16px;padding: 22px 55px;display: inline-block;border-radius: 5px;margin: 30px 0;font-weight: bold;border: 1px solid #CDCFD1;transition: box-shadow 0.2s;}
-main .dPdf:hover {box-shadow: 0px 7px 20px -4px rgba(158, 158, 158, 1);}
-main .introduction {text-align: center;font-size: 18px;padding-top: 4px;}
-section.skillSection {margin-top: 60px;}
-section.skillSection .skills {text-align: center;font-size: 35px;font-weight: 600;color: #3d4451;}
-section.skillSection .skillList {margin-top: 30px;margin-left: auto;margin-right: auto;max-width: 840px;background-color: white;list-style: none;padding: 40px 50px 0;box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);font-size: 12px;}
-section.skillSection .skillList>li {box-sizing: border-box;width: 48%;}
-section.skillSection .progressBar {height: 6px;border-radius: 2px;background-color: #FAE1E1;margin: 4px 0px 40px 0px;overflow: hidden;}
-section.skillSection .progressBar>.progress {height: 6px;border-radius: 2px;background-color: #E6686A;transform: translateX(0);transition: all 1s;}
-section.skillSection.offset .progress {transform: translateX(-100%);}
-section.skillSection .skillList>li:nth-child(odd) {float: left;}
-section.skillSection .skillList>li:nth-child(even) {float: right;}
-section.workSection {margin: 60px 0px 0px 0px}
-section.workSection .works {text-align: center;font-size: 35px;font-weight: 600;color: #3d4451;}
-section.workSection .workPic {margin: 30px auto 0px;max-width: 720px;position: relative;}
-section.workSection .workPic>.swiper-container {width: 668px;height: 501px;}
-section.workSection .workPic>.swiper-button-prev,
-section.workSection .workPic>.swiper-button-next{background-color: white;width: 64px;height: 64px;right: 100%;left: auto;border-radius: 50%;}
-section.workSection .workPic>.swiper-button-next{left: 100%;right: auto;}
-section.messageSection {width: 700px; margin: 60px auto;}
-section.messageSection h2 {text-align: center;font-size: 35px;font-weight: 600;color: #3d4451;}
-section.messageSection ul {border-top: #DDD solid 1px; list-style: none;margin-top: 10px}
-section.messageSection ul > li {padding: 16px; border-bottom: #DDD solid 1px}
-section.messageSection form {margin: 40px auto 0; width: 500px;}
+.bgPhoto {height: 750px;background-image: url(./img/rs-cover.jpg);background-position: center center;background-size: cover;}
+.bgPhoto .bgColor {background-color: rgba(0, 0, 0, 0.8);height: 750px;}
+main {color: white;position: absolute;top: 330px;width: 100%;}
+main>.firstLine>.firstFont {font-size: 38px;width: 1070px;margin: auto;margin-bottom: 10px;transform: translateX(-100%);opacity:0;transition: all 0.5s;}
+main>.firstLine>.firstFont.show {opacity: 100;transform: translateX(0);}
+main>.secondLine>.secondFont {font-size: 30px;width: 750px;margin: auto;transform: translateX(100%);opacity:0;transition: all 0.5s;}
+main>.secondLine>.secondFont.show {opacity: 100;transform: translateX(0);}
+main>.start-button {width: 80px;margin: auto;margin-top: 30px;transform: translateY(200%);opacity:0;transition: all 0.7s;}
+main>.start-button.show {opacity: 100;transform: translateY(0);}
+main>.start-button>#startButton {color: white;border: none;background-color: #dd3030;width: 80px;height: 30px;border-radius: 3px;}
+section.aboutSection {color: white; max-width: 1160px; margin: 20px auto 84px;}
+section.aboutSection>h3 {font-weight: 600; font-size: 20px;}
+section.aboutSection>p {margin: 5px 0px;color: #737B8A;}
+section.useSection {background-color: white;}
+section.useSection>div {margin: auto; max-width: 1160px; padding: 84px 0px;}
+section.messageSection {color: white; max-width: 1160px; margin: 84px auto;}
 [data-x].offset {transform: translateY(60px);}
 [data-x] {transform: translateY(0);transition: all 0.5s;}
